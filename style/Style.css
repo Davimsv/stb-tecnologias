@@ -1,17 +1,17 @@
 /* RESET */
 @font-face{
     font-family: 'gotham';
-    src: url("/assets/Gotham-Font/Gotham-Black.otf");
+    src: url("/stb-tecnologias/assets/Gotham-Font/Gotham-Black.otf");
     font-weight: 900;
 }
 @font-face{
     font-family: 'gotham';
-    src: url("/assets/Gotham-Font/Gotham-Bold.otf");
+    src: url("/stb-tecnologias/assets/Gotham-Font/Gotham-Bold.otf");
     font-weight: 700;
 }
 @font-face{
     font-family: 'gotham';
-    src: url("/assets/Gotham-Font/Gotham-Light.otf");
+    src: url("/stb-tecnologias/assets/Gotham-Font/Gotham-Light.otf");
     font-weight: 300;
 }
 
@@ -164,7 +164,7 @@ section{
 .hero{
     position: relative;
     height: 80dvh;
-    background: no-repeat right / cover url('/assets/businessman-pointing-his-presentation-futuristic-digital-screen.jpg') ;
+    background: no-repeat right / cover url('/stb-tecnologias/assets/businessman-pointing-his-presentation-futuristic-digital-screen.jpg') ;
 }
 @media (max-width:900px) {
   .hero::before{
