@@ -1,0 +1,260 @@
+/* RESET */
+@font-face{
+    font-family: 'gotham';
+    src: url("/assets/Gotham-Font/Gotham-Black.otf");
+    font-weight: 900;
+}
+@font-face{
+    font-family: 'gotham';
+    src: url("/assets/Gotham-Font/Gotham-Bold.otf");
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'gotham';
+    src: url("/assets/Gotham-Font/Gotham-Light.otf");
+    font-weight: 300;
+}
+
+  /*1. Use a more-intuitive box-sizing model.*/
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*2. Remove default margin*/
+  * {
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  
+  /*3. Allow percentage-based heights in the application*/
+  html,
+  body {
+    height: 100%;
+    font-family: 'gotham', 'sans-serif';
+  }
+  
+  /*Typographic tweaks! 4. Add accessible line-height | 5. Improve text rendering*/ 
+  body { 
+    padding-top: 50px; /* compensates the height of bootstrap fixed top navbar */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /*6. Improve media defaults*/
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /*7. Remove built-in form typography styles*/
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /*8. Avoid text overflows*/
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap:balance;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+
+/* END RESET */
+
+:root{
+    --clr-white: #fff;
+    --clr-blue-400: #3777BB;
+}
+/* CUSTOM PROPERTIES */
+
+.clr-blue-400{
+  color: #3777BB;
+}
+.clr-white{
+  color: #fff;
+}
+.bg-blue-400{
+  background-color: #3777BB;
+}
+
+.bg-white{
+  background-color: rgb(255, 255, 255)
+}
+
+/* GENERAL */
+h1,
+h2,
+h4,
+h5{
+  font-weight: 900;
+}
+
+/*MAKE MODAL BOOTSRAP OPEN PROPERLY USING AOS.JS LIBRARY*/
+.aos-init[data-aos].aos-animate {
+  transform: unset !important;
+}
+/*FIXES SIDE SCROLLING ON AOS.JS ANIMATIONS*/
+section{
+  overflow: hidden;
+}
+
+/* BUTTONS */
+
+.btn-primary{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--clr-blue-400);
+    color: var(--clr-white) !important;
+    border-radius: 1.4rem !important;
+    outline: 0;
+    padding: .5rem 2rem !important;
+    transition: all ease;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  transform: scale(1.02) !important;
+}
+
+.btn-secondary{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .75rem;
+  border: 1px solid var(--clr-blue-400);
+  color: var(--clr-blue-400) !important;
+  background-color: var(--clr-white);
+  border-radius: 1.4rem !important;
+  outline: 0;
+  padding: .5rem 2rem !important;
+  transition: all ease;
+}
+.btn-secondary:hover,
+.btn-secondary:focus{
+  transform: scale(1.02) !important;
+  background-color: var(--clr-blue-400);
+  color: var(--clr-white) !important;
+}
+
+/* NAVBAR */
+.nav-logo{
+    height: 75px;
+}
+
+/* HERO */
+
+.hero{
+    position: relative;
+    height: 80dvh;
+    background: no-repeat right / cover url('/assets/businessman-pointing-his-presentation-futuristic-digital-screen.jpg') ;
+}
+@media (max-width:900px) {
+  .hero::before{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 80dvh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .9);
+  }
+}
+
+.hero-text{
+  position: relative;
+}
+
+/* SECTION INSTITUCIONAL */
+
+.line{
+  --_round-corner: 3px;
+
+  height: var(--_round-corner);
+  width: 80%;
+  max-width: 300px;
+  margin: 2rem auto;
+  background-color: var(--clr-white);
+  border-radius: var(--_round-corner);
+}
+.strengths-wrapper{
+  margin-top: -3rem;
+  gap: 1rem;
+}
+.strength{
+  background-color: var(--clr-white);
+  color: var(--clr-blue-400);
+  padding: 1rem 2rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+/* SECTION PRODUCTS */
+
+.product-img{
+  width: 100%;
+  max-width: 350px;
+  margin-inline: 2rem;
+}
+
+/* MODAL PRODUCTS */
+
+.modal-product-area{
+  border-radius: 2rem;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.modal-product-title{
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+.modal-product-image{
+  margin-top: 5rem;
+  margin-left: -50px;
+}
+@media (max-width:768px) {
+  .modal-product-image{
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
+}
+.modal-product-image img{
+  max-width: 215px;
+}
+.modal-product-image a{
+  font-size: .9rem;
+}
+
+/*SECTION TESTIMONIAL*/
+
+.testimonial-item{
+  background-color: var(--clr-white);
+  border-radius: 2rem;
+}
+.user-img{
+  background-color: gray;
+  aspect-ratio: 1/1;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.user-desc-text{
+  font-size: .9rem;
+} 
